@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clousure</title>
+</head>
+<button id="orange">Orange</button>
+<button id="green">Green</button>
+<body>
+
+</body>
+<script>
+    // function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+
+    // function outer() {
+    //     let username = "Subhas"
+    //     console.log("Code is: ",code)
+    //     function inner() {
+    //         let code=1235
+    //         console.log("Inner", username)
+    //     }
+    //     inner()
+    //     function innertwo() {
+    //         console.log("InnerTwo", username)
+    //     }
+    //     innertwo()
+
+    // }
+    // outer()
+    // console.log(`TOO OUTER: ${username}`)
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+</script>
+
+<script>
+    // document.querySelector("#orange").onclick=function(){
+    //     document.body.style.backgroundColor=`orange`
+    // }
+    // document.querySelector("#green").onclick=function(){
+    //     document.body.style.backgroundColor=`green`
+    // }
+
+     function clickHandeler(color){
+        // document.body.style.backgroundColor=`${color}`
+
+       return function(){
+            document.body.style.backgroundColor=`${color}`
+        }
+     }
+     document.getElementById("orange").onclick=clickHandeler("orange")
+     document.getElementById("green").onclick=clickHandeler("green")
+    
+</script>
+</html>
